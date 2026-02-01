@@ -27,6 +27,18 @@ app.use(cors({
 }));
 app.use(express.json());
 
+// 根路徑
+app.get('/', (req, res) => {
+  res.json({
+    message: 'Whisper 語音轉文字翻譯 API',
+    version: '1.0.0',
+    endpoints: {
+      health: 'GET /health',
+      transcribe: 'POST /api/transcribe'
+    }
+  });
+});
+
 // 路由
 app.use('/api', transcribeRoutes);
 

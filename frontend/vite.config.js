@@ -18,5 +18,6 @@ export default defineConfig({
     sourcemap: false,
     minify: 'terser'
   },
-  publicDir: 'public'
+  publicDir: 'public',
+  base: '/'
 });
