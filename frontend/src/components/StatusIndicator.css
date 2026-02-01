@@ -1,0 +1,46 @@
+.status-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  min-height: 50px;
+}
+
+.status-indicator.uploading,
+.status-indicator.transcribing {
+  background: rgba(102, 126, 234, 0.3);
+}
+
+.status-indicator.done {
+  background: rgba(76, 175, 80, 0.3);
+}
+
+.status-indicator.error {
+  background: rgba(244, 67, 54, 0.3);
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.status-text {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
